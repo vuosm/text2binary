@@ -1,0 +1,22 @@
+#include <iostream>
+#include <bitset>
+#include <string>
+
+int main()
+{
+	std::string text;
+
+	std::cout << "Enter your Text: ";
+	std::getline(std::cin, text);
+
+	std::cout << "Binary: ";
+
+	for (char c : text)
+	{
+		std::bitset<8> binary(c);
+		std::cout << binary << " ";
+	}
+
+	std::cout << std::endl;
+	return 0;
+}
